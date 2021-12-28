@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd" >
+<properties>
+	<comment>live</comment>
+			
+		
+		
+	<!-- 시스템설정 -->
+	<!-- GPKI 설정   -->
+	<!-- GPKI.myServerId   -->					
+	<entry key="GPKI.myServerId">SVRB551178005</entry>	
+	<!-- GPKI.certFilePath   -->			
+	<entry key="GPKI.certFilePath">/tmax/jeus6/webserver/ssl/GPKI/Certificate/class1</entry>	
+	<!-- GPKI.envCertFilePathName   -->			
+	<entry key="GPKI.envCertFilePathName">/tmax/jeus6/webserver/ssl/GPKI/Certificate/class1/SVRB551178005_env.cer</entry>	
+	<!-- GPKI.envPrivateKeyFilePathName   -->			
+	<entry key="GPKI.envPrivateKeyFilePathName">/tmax/jeus6/webserver/ssl/GPKI/Certificate/class1/SVRB551178005_env.key</entry>	
+	<!-- GPKI.envPrivateKeyFilePathName  -->			
+	<entry key="GPKI.envPrivateKeyPasswd">kacpark12!@</entry>	
+	
+	<!-- GPKI.sigCertFilePathName  -->			
+	<entry key="GPKI.sigCertFilePathName">/tmax/jeus6/webserver/ssl/GPKI/Certificate/class1/SVRB551178005_sig.cer</entry>	
+	<!-- GPKI.sigPrivateKeyFilePathName  서버전자서명경로 암호키  -->			
+	<entry key="GPKI.sigPrivateKeyFilePathName">/tmax/jeus6/webserver/ssl/GPKI/Certificate/class1/SVRB551178005_sig.key</entry>	
+	<!-- GPKI.sigPrivateKeyPasswd 서버전자서명 비밀번호  -->			
+	<entry key="GPKI.sigPrivateKeyPasswd">kacpark12!@</entry>	
+	<!-- GPKI.gpkiLicPath  라이센스파일위치 -->			
+	<entry key="GPKI.gpkiLicPath">/tmax/jeus6/webserver/ssl/GPKI/Certificate/conf/</entry>
+	<!-- GPKI.targetServerIdList  대상서버들인증서ID List 구분자 , -->			
+	<entry key="GPKI.targetServerIdList">SVR1311000030,SVR1312286006</entry>
+					
+	
+	<!-- SOAP prefix 설정  -->				
+	<entry key="SOAP.prefix"></entry>	
+	<!-- SOAP 전송메시지메타   -->			
+	<entry key="contentType">text/xml</entry>
+	<!-- SOAP 전송메시지 인코딩 charset  -->	
+	<entry key="endoding">UTF-8</entry>	
+	<!-- 전체 SOAP 커넥션 타임아웃 단위 : ms -->	
+	<entry key="connectTimeout">100000</entry>
+	<!-- 전체 SOAP 처리 대기 타임아웃 단위 : ms -->	
+	<entry key="soTimeout">100000</entry>	
+	<!-- 전체 GPKI사용여부 -->
+	<entry key="useEncrypt">Y</entry>
+	
+	
+	
+	<!-- 사용자먕 (임의) -->
+ 	
+ 	<!-- 기본사용자설정 -->
+ 	<!-- 사용자 부서 (임의) -->
+ 	<entry key="userDeptCode">000000</entry>
+ 	<!-- 사용자먕 (임의) -->
+ 	<entry key="userName">한국공항공사</entry>
+ 	<!-- 이용할 system Code(TEST) -->
+ 	<!-- <entry key="useSystemCode">ESBTEST</entry>  -->
+ 	<!-- 이용할 system Code(REAL) -->
+ 	<entry key="useSystemCode">B551178KAC</entry>
+ 	
+	
+	<!-- 서비스별 기본 설정 정보 -->
+	<!--경차 자격여부 Service 정보-->
+	<!--경차 자격여부 Service URI-->
+	<entry key="reductionTsCarInfo.URI">http://152.99.88.156:10101/nrw/infoservice/ts/ReductionTsCarInfoService</entry>
+	<!--경차 자격여부 Service 조회 사용여부-->
+	<entry key="reductionTsCarInfo.procYn">Y</entry>
+	<!--경차 자격여부 Service 스케쥴기능 사용여부 Y:사용 , N : 미사용 -->
+	<entry key="reductionTsCarInfo.schedulerYn">Y</entry>
+	<!--경차 자격여부 Service 인증서 아이디  -->
+	<entry key="reductionTsCarInfo.certServerId">SVRB551178005</entry>
+	<!--경차 자격여부 Service 연계정보코드 AC1_A69_13 고정값-->
+	<entry key="reductionTsCarInfo.cntcInfoCode">AC1_A69_13</entry>
+	<!--경차 자격여부 Service 신청자명 (아이디)  -->
+	<entry key="reductionTsCarInfo.chargerId">KAC</entry>
+	<!--경차 자격여부 Service 신청자명 (임의)  -->
+	<entry key="reductionTsCarInfo.chargerNm">한국공항공사</entry>
+	<!--경차 자격여부 Service 사용자IP  -->
+	<entry key="reductionTsCarInfo.chargerIpAdres">211.35.58.115</entry>
+	<!--경차 자격여부 service methodName  -->
+	<entry key="reductionTsCarInfo.methodName">getReductionTsCarInfo</entry>
+	<!--경차 자격여부 serviceName  -->
+	<entry key="reductionTsCarInfo.serviceName">ReductionTsCarInfoService</entry>
+	<!--경차 자격여부 service namespace  -->
+	<entry key="reductionTsCarInfo.nameSpace">http://ccais.mopas.go.kr/dh/nrw/infoservice/ts/ReductionTsCarInfo/types</entry>
+	<!--경차 자격여부 service targetServerId  -->
+	<entry key="reductionTsCarInfo.targetServerId">SVR1311000030</entry>	
+	
+	<!--저공해차량 자격여부 Service 정보-->
+	<!--저공해차량 자격여부 Service URI-->
+	<entry key="lowPollutionCarYn.URI">http://152.99.88.156:10101/rid/ynservice/keco/LowPollutionCarYnService</entry>
+	<!--저공해차량 자격여부 Service 조회 사용여부-->
+	<entry key="lowPollutionCarYn.procYn">Y</entry>
+	<!--저공해차량 자격여부 Service 스케쥴기능 사용여부 Y:사용 , N : 미사용 -->
+	<entry key="lowPollutionCarYn.schedulerYn">Y</entry>
+	<!--저공해차량 자격여부 Service 인증서 아이디  -->
+	<entry key="lowPollutionCarYn.certServerId">SVRB551178005</entry>
+	<!--저공해차량 자격여부 service methodName  -->
+	<entry key="lowPollutionCarYn.methodName">getLowPollutionCarYn</entry>
+	<!--저공해차량 자격여부 serviceName  -->
+	<entry key="lowPollutionCarYn.serviceName">LowPollutionCarYnService</entry>
+	<!--저공해차량 자격여부 service namespace  -->
+	<entry key="lowPollutionCarYn.nameSpace">http://ccais.mopas.go.kr/dh/rid/services/keco/LowPollutionCarYn/types</entry>	
+	<!--저공해차량 자격여부 Service 연계기관코드-->
+	<entry key="lowPollutionCarYn.body.reqId">ECA90004JH06</entry>
+	<!--저공해차량 자격여부 service targetServerId  -->
+	<entry key="lowPollutionCarYn.targetServerId">SVR1311000030</entry>
+	
+	<!--(신규)저공해차량 자격여부 Service 정보-->
+	<!--(신규)저공해차량 자격여부 Service URI-->
+	<entry key="newLowPollutionCarYn.URI">http://152.99.88.156:10101/rid/ynservice/keco/PubLowPollutionCarYnService</entry>
+	<!--(신규)저공해차량 자격여부 Service 조회 사용여부-->
+	<entry key="newLowPollutionCarYn.procYn">Y</entry>
+	<!--(신규)저공해차량 자격여부 Service 스케쥴기능 사용여부 Y:사용 , N : 미사용 -->
+	<entry key="newLowPollutionCarYn.schedulerYn">Y</entry>
+	<!--(신규)저공해차량 자격여부 Service 인증서 아이디  -->
+	<entry key="newLowPollutionCarYn.certServerId">SVRB551178005</entry>
+	<!--(신규)저공해차량 자격여부 service methodName  -->
+	<entry key="newLowPollutionCarYn.methodName">getPubLowPollutionCarYn</entry>
+	<!--(신규)저공해차량 자격여부 serviceName  -->
+	<entry key="newLowPollutionCarYn.serviceName">PubLowPollutionCarYnService</entry>
+	<!--(신규)저공해차량 자격여부 service namespace  -->
+	<entry key="newLowPollutionCarYn.nameSpace">http://ccais.mopas.go.kr/dh/rid/services/keco/PubLowPollutionCarYn/types</entry>	
+	<!--(신규)저공해차량 자격여부 service targetServerId  -->
+	<entry key="newLowPollutionCarYn.targetServerId">SVR1311000030</entry>	
+	
+	<!--국가유공자차량 자격여부 Service 정보-->
+	<!--국가유공자차량 자격여부 Service URI-->
+	<entry key="meritCarYn.URI">http://152.99.88.156:10101/rid/ynservice/mpva/MeritCarYnService</entry>
+	<!--국가유공자차량 자격여부 Service 조회 사용여부-->
+	<entry key="meritCarYn.procYn">Y</entry>
+	<!--국가유공자차량 자격여부 Service 스케쥴기능 사용여부 Y:사용 , N : 미사용 -->
+	<entry key="meritCarYn.schedulerYn">Y</entry>
+	<!--국가유공자차량 자격여부 Service 인증서 아이디  -->
+	<entry key="meritCarYn.certServerId">SVRB551178005</entry>
+	<!--국가유공자차량 자격여부 service methodName  -->
+	<entry key="meritCarYn.methodName">getMeritCarYn</entry>
+	<!--국가유공자차량 자격여부 serviceName  -->
+	<entry key="meritCarYn.serviceName">MeritCarYnService</entry>
+	<!--국가유공자차량 자격여부 service namespace  -->
+	<entry key="meritCarYn.nameSpace">http://ccais.mopas.go.kr/dh/rid/services/mpva/MeritCarYn/types</entry>	
+	<!--국가유공자차량 자격여부 service targetServerId  -->
+	<entry key="meritCarYn.targetServerId">SVR1312286006</entry>
+	
+	
+	<!--장애인차량 자격여부 Service 정보-->
+	<!--장애인차량 자격여부 Service URI-->
+	<entry key="reductionDisabledCarYn.URI">http://152.99.88.156:10101/rid/ynservice/swsdn/ReductionDisabledCarYnService</entry>
+	<!--장애인차량 자격여부 Service 조회 사용여부-->
+	<entry key="reductionDisabledCarYn.procYn">Y</entry>
+	<!--장애인차량 자격여부 Service 스케쥴기능 사용여부 Y:사용 , N : 미사용 -->
+	<entry key="reductionDisabledCarYn.schedulerYn">Y</entry>
+	<!--장애인차량 자격여부 Service 인증서 아이디  -->
+	<entry key="reductionDisabledCarYn.certServerId">SVRB551178005</entry>
+	<!--장애인차량 자격여부 service methodName  -->
+	<entry key="reductionDisabledCarYn.methodName">getReductionDisabledCarYn</entry>
+	<!--장애인차량 자격여부 serviceName  -->
+	<entry key="reductionDisabledCarYn.serviceName">ReductionDisabledCarYnService</entry>
+	<!--장애인차량 자격여부 service namespace  -->
+	<entry key="reductionDisabledCarYn.nameSpace">http://ccais.mopas.go.kr/dh/rid/services/swsdn/ReductionDisabledCarYn/types</entry>	
+	<!--장애인차량 자격여부 Service 요청기관코드  -->
+	<entry key="reductionDisabledCarYn.body.reqOrgCd">AIR</entry>
+	<!--장애인차량 자격여부 Service 요청업무코드  -->
+	<entry key="reductionDisabledCarYn.body.reqBizCd">B551178S002</entry>
+	<!--장애인차량 자격여부 service targetServerId  -->
+	<entry key="reductionDisabledCarYn.targetServerId">SVR1311000030</entry>
+	
+	
+	<!--다자녀차량 자격여부 Service 정보-->
+	<!--다자녀차량 자격여부 Service URI-->
+	<entry key="allChldrnCoBirthInfo.URI">http://152.99.88.156:10101/jmn/infoservice/jumin/AllChldrnCoBirthInfoService</entry>
+	<!--다자녀차량 자격여부 Service 조회 사용여부-->
+	<entry key="allChldrnCoBirthInfo.procYn">Y</entry>
+	<!--다자녀차량 자격여부 Service 스케쥴기능 사용여부 Y:사용 , N : 미사용 -->
+	<entry key="allChldrnCoBirthInfo.schedulerYn">Y</entry>
+	<!--다자녀차량 자격여부 Service 인증서 아이디  -->
+	<entry key="allChldrnCoBirthInfo.certServerId">SVRB551178005</entry>
+	<!--다자녀차량 자격여부 service methodName  -->
+	<entry key="allChldrnCoBirthInfo.methodName">getAllChldrnCoBirthInfo</entry>
+	<!--다자녀차량 자격여부 serviceName  -->
+	<entry key="allChldrnCoBirthInfo.serviceName">AllChldrnCoBirthInfoService</entry>
+	<!--다자녀차량 자격여부 service namespace  -->
+	<entry key="allChldrnCoBirthInfo.nameSpace">http://ccais.mopas.go.kr/dh/jmn/services/jumin/AllChldrnCoBirthInfo/types</entry>	
+	<!--다자녀차량 자격여부 Service 요청기관코드  -->
+	<entry key="allChldrnCoBirthInfo.body.orgCode">1174000001</entry>
+	<!--다자녀차량 자격여부 service targetServerId  -->
+	<entry key="allChldrnCoBirthInfo.targetServerId">SVR1311000030</entry>
+	
+	
+	<!-- web key -->
+	<entry key="passPhrase">f442381a0a9b3e9d01ed937421a43de2</entry>
+	
+	<!-- SITE ID -->
+	<entry key="siteId"></entry>
+	
+	<!-- 서비스별 DB처리 flag  Y면 서비스별로 프로시저 호출-->
+	<entry key="dbFlag">N</entry>
+	
+</properties>

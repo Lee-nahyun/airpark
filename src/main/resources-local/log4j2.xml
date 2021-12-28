@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Configuration>
+	<properties>
+			<property name="logPath">C:/workspace/log/rightShare</property>
+	</properties>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %5p [%c] %m%n" />
+        </Console>
+		<RollingFile name="dailyLog" fileName="${logPath}/schedule.log" filePattern="${logPath}/%d{yyyyMM}/scheduler_%d{yyyy-MM-dd}.log" append="false">
+			<PatternLayout pattern="%d %5p %m%n"/>
+			<Policies>
+				<!-- interval(default 1)이므로 1초 간격으로 rolling 수행
+					intervar속성 추가
+				-->
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+				<!-- 사이즈 제한을 하고 싶을 경우 아래 속성 추가
+				-->
+				<!-- <SizeBasedTriggeringPolicy size="250 MB"/> -->
+			</Policies>                                     
+		</RollingFile>
+		<RollingFile name="dailyWebLog" fileName="${logPath}/rightShareWeb.log" filePattern="${logPath}/%d{yyyyMM}/Web_%d{yyyy-MM-dd}.log" append="false">
+			<PatternLayout pattern="%d %5p %m%n"/>
+			<Policies>
+				<!-- interval(default 1)이므로 1초 간격으로 rolling 수행
+					intervar속성 추가
+				-->
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+				<!-- 사이즈 제한을 하고 싶을 경우 아래 속성 추가
+				-->
+				<SizeBasedTriggeringPolicy size="10 MB"/>
+			</Policies>                                     
+		</RollingFile>
+    </Appenders>
+    <Loggers>
+    	<Logger name="org.apache.commons.digester.Digester" level="DEBUG" additivity="false">
+        	<appender-ref ref="console"/>
+        	<AppenderRef ref="dailyLog" />
+    	</Logger>
+    	<Logger name="org.apache.catalina" level="DEBUG" additivity="false">
+        	<appender-ref ref="console"/>
+        	<AppenderRef ref="dailyLog" />
+    	</Logger>
+    	<Logger name="org.apache.jasper" level="DEBUG" additivity="false">
+        	<appender-ref ref="console"/>
+        	<AppenderRef ref="dailyLog" />
+    	</Logger>
+    	
+        <Logger name="egovframework" level="DEBUG" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="dailyLog" />
+        </Logger>
+		  <!-- log SQL with timing information, post execution -->
+	    <Logger name="jdbc.sqltiming" level="DEBUG" additivity="false">
+	        <appender-ref ref="console" />
+	        <AppenderRef ref="dailyLog" />
+	    </Logger>
+	    <Logger name="org.springframework" level="DEBUG" additivity="false">
+	        <appender-ref ref="console" />
+	        <AppenderRef ref="dailyLog" />
+	    </Logger>
+	    
+	    <Logger name="kr.airport.parking.scheduler.job" level="DEBUG" additivity="false">
+			<AppenderRef ref="console" />
+			<AppenderRef ref="dailyLog" />
+		</Logger>
+		
+		<Logger name="kr.airport.parking.scheduler.service" level="DEBUG" additivity="false">
+			<AppenderRef ref="console" />
+			<AppenderRef ref="dailyLog" />
+		</Logger>
+		
+		<Logger name="kr.airport.parking.scheduler.mapper" level="DEBUG" additivity="false">
+			<AppenderRef ref="console" />
+			<AppenderRef ref="dailyLog" />
+		</Logger>
+		
+			 <Logger name="kr.airport.parking.rightshare.service.AllChldrnCoCnfirmService" level="DEBUG" additivity="false">
+			<AppenderRef ref="dailyWebLog" />
+		</Logger>
+		<Logger name="kr.airport.parking.rightshare.service.ChldrnAgeCnfirmService" level="DEBUG" additivity="false">
+			<AppenderRef ref="dailyWebLog" />
+		</Logger>
+		<Logger name="kr.airport.parking.rightshare.service.ChldrnCoCnfirmService" level="DEBUG" additivity="false">
+			<AppenderRef ref="dailyWebLog" />
+		</Logger>
+	    
+        <Root level="DEBUG">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="dailyLog" />
+        </Root>
+    </Loggers>
+</Configuration>
